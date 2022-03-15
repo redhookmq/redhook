@@ -240,6 +240,19 @@ leadership:
       image: images/uploads/home/leadership/Leo_Paolo_Fernando.jpg
       name: Leo Paolo Fernando
       role: Controller
+    - bio: >-
+        Alyssa supports Red Hook’s business development and marketing team.
+        Introducing charters to our model and helping them start the process of
+        building their forever home is her specialty. Additionally she assists
+        with our day-to-day marketing, which includes conference attendance and
+        building brand awareness to our local communities. As a former charter
+        school teacher and a real estate enthusiast her zest the work she does
+        is unmatched. She holds a Bachelor's Degree in Education, and a Masters
+        Degree of Art in Instruction Design and Curriculum Development.
+      email: aross@redhookcap.com
+      image: /images/uploads/Alyssa_RedHook_Bio.jpg
+      name: Alyssa Ross
+      role: Marketing & Business Development Associate
   title: About Us
 ---
 
