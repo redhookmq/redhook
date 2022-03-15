@@ -250,6 +250,18 @@ leadership:
       image: /images/uploads/RedHook_Bio_Ingrid.jpg
       name: Ingrid Canedo
       role: Project Manager
+    - bio: >-
+        David supports Red Hook’s finance team in underwriting capital projects
+        and day-to-day fiscal management. His primary responsibilities include
+        financial modeling, valuations, credit analysis, market research, and
+        investment memorandums. David frequently works alongside project
+        managers and interacts with clients and investors. Since joining in
+        2021, David has played an integral role in underwriting acquisitions,
+        maintaining held assets, and executing dispositions. David holds a B.S.
+        in Business Administration from the University of Southern California.
+      image: /images/uploads/RedHook_Bio_David_Choi.jpg
+      name: David Choi
+      role: Financial Analyst
   title: About Us
 ---
 
