@@ -259,7 +259,7 @@ leadership:
         2021, David has played an integral role in underwriting acquisitions,
         maintaining held assets, and executing dispositions. David holds a B.S.
         in Business Administration from the University of Southern California.
-      image: /images/uploads/RedHook_Bio_David_Choi.jpg
+      image: /images/uploads/Screen Shot 2022-03-15 at 2.28.54 PM.png
       name: David Choi
       role: Financial Analyst
   title: About Us
