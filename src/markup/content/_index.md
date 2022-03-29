@@ -227,6 +227,16 @@ leadership:
       image: images/uploads/home/leadership/Leo_Paolo_Fernando.jpg
       name: Leo Paolo Fernando
       role: Controller
+    - bio: >-
+        Ingrid is responsible for the day-to-day project management and
+        coordination with design teams and public agencies. Prior to joining
+        RedHook, Ingrid’s 7 years of experience in commercial architectural
+        design include projects in higher education, commercial office space,
+        capital improvement and tenant improvement categories. Ingrid holds a
+        Bachelor of Science degree in Interior Design.
+      image: /images/uploads/BioIngrid.jpg
+      name: Ingrid Canedo
+      role: Project Manager
   title: About Us
 ---
 
