@@ -234,6 +234,7 @@ leadership:
         design include projects in higher education, commercial office space,
         capital improvement and tenant improvement categories. Ingrid holds a
         Bachelor of Science degree in Interior Design.
+      email: john@sisu.agency
       image: /images/uploads/BioIngrid.jpg
       name: Ingrid Canedo
       role: Project Manager
