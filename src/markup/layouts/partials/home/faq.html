@@ -2,7 +2,8 @@
   <div class="faq__container">
 
   	<div class="col-left">
-  		{{ range $index, $faq := first 5 .Params.faq.groups }}
+	{{ with .Params.faq.groups }}
+  		{{ range first 5 . }}
   		<div class="accordion accordion-header">
   			<div>
   				<h3 class="accordion-heading">{{ .question }}</h3>
@@ -17,6 +18,7 @@
 
   		{{ end }}
       <button class="faq-all default mobile"><span>See All</span></button>
+	{{ end }}
   	</div>
 
   	<div class="col-right">
