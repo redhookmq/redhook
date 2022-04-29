@@ -1,7 +1,9 @@
 <section class="bios">
   <div class="bios__container">
       <h2 class="bios__leadership__title">{{ .Params.leadership.title }}</h1>
+      {{ if .Params.leadership.heading }}
       <p class="bios__leadership__heading">{{ .Params.leadership.heading | safeHTML }}</p>
+      {{ end }}
     <button class="bios__close-btn">
       <!-- {{ partial "svgs/close-x.svg" (dict "class" "bios__close-icon")}} -->
       <img src="/images/uploads/home/close-x.png" alt="">

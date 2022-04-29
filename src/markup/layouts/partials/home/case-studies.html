@@ -27,7 +27,9 @@
                   </div>
                 </div>
               </div>
+              {{ with .Params.featured_image }}
               <img class="grid-item__img" src="{{ .Params.featured_image | relURL }}" alt="">
+              {{ end }}
             </a>
           </div>
 

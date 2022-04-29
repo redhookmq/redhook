@@ -1,7 +1,11 @@
 <section class="faqs">
 	<div class="faq__container">
+		{{ if .Params.faq.title }}
   		<h2 class="faq__title">{{ .Params.faq.title | safeHTML }}</h1>
+		{{ end }}
+		{{ if .Params.faq.heading }}
      	<p class="faq__heading">{{ .Params.faq.heading | safeHTML }}</p>
+		{{ end }}
 
      	<div class="col-faqs">
 	  		{{ range $index, $faq := .Params.faq.groups }}

@@ -20,8 +20,12 @@
   	</div>
 
   	<div class="col-right">
+		{{ if .Params.faq.title }}
   		<h2 class="faq__title">{{ .Params.faq.title | safeHTML }}</h1>
+		{{ end }}
+		{{ if .Params.faq.heading }}
      	<p class="faq__heading">{{ .Params.faq.heading | safeHTML }}</p>
+		{{ end }}
      	<button class="faq-all default"><span>See All</span></button>
   	</div>
 

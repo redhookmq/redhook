@@ -2,7 +2,9 @@
   <div class="leadership__container">
     <div class="col-left">
       <h1 class="leadership__title">{{ .Params.leadership.title }}</h1>
+      {{ if .Params.leadership.heading }}
       <p class="leadership__heading">{{ .Params.leadership.heading | safeHTML }}</p>
+      {{ end }}
       <p class="leadership__details">{{ .Params.leadership.details }}</p>
       {{ range first 1 .Params.leadership.leader }}
       <button class="leadership__all-button leader__link default" data-href="#{{ urlize .name }}">

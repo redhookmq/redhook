@@ -2,8 +2,12 @@
   <div class="process__container">
 
     <div class="col-right">
+      {{ if .Params.process.heading }}
       <h1 class="process__title">{{ .Params.process.title | safeHTML }}</h1>
+      {{ end }}
+      {{ if .Params.process.heading }}
       <h2 class="process__heading">{{ .Params.process.heading | safeHTML }}</h2>
+      {{ end }}
     </div>
 
     <div class="slider">
