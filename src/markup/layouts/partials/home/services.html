@@ -5,6 +5,7 @@
 
       <div class="services__video">
         <div class="services__video-play-btn"></div>
+
         {{ with .Params.services.video_image_lrg }}
         <img class="services__video-keyframe-image" src="{{ .Params.services.video_image_lrg | relURL }}" />
         {{ end }}
