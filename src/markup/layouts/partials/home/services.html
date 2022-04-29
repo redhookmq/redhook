@@ -29,11 +29,11 @@
       <h1 class="services__title">{{ .Params.services.title | safeHTML }}</h1>
       <h2 class="services__heading">{{ .Params.services.heading | safeHTML }}</h2>
       
-      <div class="services__video mobile" style="background-image: url(
+      <div class="services__video mobile" 
         {{ with .Params.services.video_image_lrg }}
-        {{ .Params.services.video_image_lrg | relURL }}
+        style="background-image: url({{ .Params.services.video_image_lrg | relURL }});"
         {{ end }}
-        );">
+      >
       
         <div class="services__video-play-btn"></div>
         {{ with .Params.services.video_image_lrg }}
