@@ -24,7 +24,9 @@
             {{ partial "svgs/map-marker.svg" (dict "class" "contact__icon contact__icon--map-marker")}}
           </span>
           <span class="contact__text">
+            {{ if .Params.contact.address }}
             {{ .Site.Params.contact.address | markdownify }}
+            {{ end }}
             <br><strong>Get Directions {{ partial "svgs/chevron-right.svg" (dict "class" "contact__arrow")}}</strong>
           </span>
         </a>
