@@ -3,14 +3,21 @@ import Slider from './common/Slider';
 import Grid from './common/Grid';
 
 const $window = $(window);
+const $windowWidth = $(window).width();
 const $hero = $('#hero');
+var $scrollDistance = 170;
+
+
+if ( $windowWidth <= 870 ) {
+  $scrollDistance = 80;
+}
 
 // init scroll down button
 // ----------------------------------------- //
 $('.scroll-down-btn').click((e) => {
   e.preventDefault();
   $('html, body').animate({
-    scrollTop: $hero.height() - 170
+    scrollTop: $hero.height() - $scrollDistance
   }, 500, 'easeInOutQuad');
 });
 
@@ -32,6 +39,8 @@ const $body = $('html, body');
 const $leadershipSection = $('.leadership');
 const $leaderLinks = $('.leader__link');
 const $biosSection = $('.bios');
+const $faqSection = $('.faq');
+const $faqsSection = $('.faqs');
 const $navLinks = $('.bios__nav-link');
 const $bios = $('.bio');
 
@@ -41,7 +50,11 @@ $leaderLinks.each((i, el) => {
 
   $el.click((e) => {
     e.preventDefault();
-    openBio($el.attr('href').replace('#', ''));
+    if ( $el.data('href') !== undefined ) {
+    	openBio($el.data('href').replace('#', ''));
+    } else {
+    	openBio($el.attr('href').replace('#', ''));
+    }
   });
 });
 
@@ -59,11 +72,21 @@ $('.bios__close-btn').click((e) => {
   closeBio();
 });
 
+$('.faq .faq-all').click((e) => {
+  e.preventDefault();
+  openFaq();
+});
+
+$('.faqs .faq-close').click((e) => {
+  e.preventDefault();
+  closeFaq();
+});
+
 const openBio = function (id) {
   $leadershipSection.addClass('is-open');
   $biosSection.addClass('is-open');
 
-  const offset = $biosSection.offset().top + 2;
+  const offset = $biosSection.offset().top - $scrollDistance;
 
   $body.animate({
     scrollTop: offset
@@ -93,6 +116,34 @@ const closeBio = function () {
   $biosSection.removeClass('is-open');
 };
 
+
+
+
+const openFaq = function (id) {
+  $faqSection.addClass('is-open');
+  $faqsSection.addClass('is-open');
+
+  const offset = $faqsSection.offset().top - $scrollDistance;
+
+  $body.animate({
+    scrollTop: offset
+  }, 500, 'easeInOutQuad');
+
+  $navLinks.each((i, el) => {
+    const $el = $(el);
+    if ($el.attr('href').replace('#', '') === id) {
+      $el.addClass('is-current');
+    } else {
+      $el.removeClass('is-current');
+    }
+  });
+};
+
+const closeFaq = function () {
+  $faqSection.removeClass('is-open');
+  $faqsSection.removeClass('is-open');
+};
+
 // Accordion
 //
 const $accordion = $('.accordion-header');
@@ -103,8 +154,8 @@ $accordionDesc.fadeOut(0);
 
  $('.accordion-header').click(function() {
 
-   if ( $('.accordion-header .indicator').hasClass('open' ) ) {
-     $('.accordion-header .indicator').removeClass('open');
+   if ( $(this).hasClass('open' ) ) {
+     $(this).removeClass('open');
    }
 
    if( $(this).find('.indicator').hasClass('open') ) {
@@ -140,16 +191,33 @@ $(".services__video").on("click", function (ev) {
 
 });
 
-// $accordion.click((e) => {
-//   e.preventDefault();
-//   triggerAccordion();
-// });
+$(".bio__details.closed .preview").each( function() {
+	if ( ! $(this).children('p').length ) {
+		var cont = $(this);
+		var content = cont.html();
+		content = '<p>' + content + '</p>';
+		cont.html(content);
 
-// const triggerAccordion = function() {
-//   console.log($(this));
-//   $accordionDesc.not(
-//     $(this).next()
-//     ).slideUp('fast');
-//   $(this).next($accordionDesc).slideToggle(400);
-// };
+		var complete = $(this).siblings('.bio-complete');
+		var complete_bio = complete.html();
+		complete_bio = '<p>' + complete_bio + '</p>';
+
+		complete.html(complete_bio);
+
+	}
+});
+
+
+$(".bio__details.closed .preview p").append("<span class='read-more'> " + $('.bio__details.closed').data("read-more") + "</span>");
+const $readmorelink = $('.bio__details .read-more');
+
+$readmorelink.on('click', function(e){
+  console.log('click event');
+  var $parent = $(this).parents('.bio__details');
+  $parent.toggleClass('closed').toggleClass('open');
+});
+
+
+
+
 

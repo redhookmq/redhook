@@ -36,6 +36,13 @@
 	img {
 		align-self: center;
 	}
+
+	@media (max-width: $mobileNav) {
+		padding: 55px 0;
+		img {
+			max-height: 36px;
+		}
+	}
 }
 
 @keyframes ticker {
@@ -45,7 +52,7 @@
   }
 
   100% {
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-296%, 0, 0);
   }
 }
 	

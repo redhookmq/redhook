@@ -10,8 +10,10 @@ const $window = $(window);
 const $body = $('html, body');
 const $mask = $('.site-container__mask');
 const $siteNav = $('.site-nav');
+const $mobNav = $('.site-header');
 const $menuBtn = $('.menu-btn');
-const $links = $('.js-nav-link');
+const $links = $('.primary .js-nav-link');
+const $csLinks = $('.case-study .js-nav-link');
 const $siteSections = $('.js-site-section');
 let windowHeight = $window.height();
 let isSticky = false;
@@ -55,6 +57,17 @@ const bind = function () {
     });
   });
 
+  $csLinks.each((i, el) => {
+    const $el = $(el);
+    const id = $el.attr('href');
+
+    $el.click((e) => {
+    window.location.href = '/'+id;
+      // e.preventDefault();
+      // scrollToSection(id);
+    });
+  });
+
   $window.on('scroll', () => {
     checkNavPosition();
   });
@@ -87,10 +100,12 @@ const checkNavPosition = function () {
     if (isSticky === false) {
       isSticky = true;
       $siteNav.addClass('is-sticky');
+      $mobNav.addClass('is-sticky');
     }
   } else if (isSticky) {
     isSticky = false;
     $siteNav.removeClass('is-sticky');
+    $mobNav.removeClass('is-sticky');
   }
 };
 

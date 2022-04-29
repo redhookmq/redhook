@@ -1,7 +1,9 @@
 <section id="hero" class="hero js-site-section">
   <div class="hero__container">
     <div class="hero__copy-container">
+      {{ if .Params.hero.title }}
       <h1 class="hero__title">{{ .Params.hero.title | safeHTML }}</h1>
+      {{ end }}
       <p class="hero__details">{{ .Params.hero.details }}</p>
     </div>
     <button class="scroll-down-btn">
@@ -12,11 +14,11 @@
 </section>
 <style>
   .hero {
-    background-image: url({{ .Params.hero.image_lrg | relURL }});
+    background-image: url({{ .Params.hero.image_lrg }});
   }
   @media (max-width: 870px) {
     .hero {
-      background-image: url({{ .Params.hero.image_sml | relURL }});
+      background-image: url({{ .Params.hero.image_sml }});
     }
   }
 </style>

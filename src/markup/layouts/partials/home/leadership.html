@@ -2,14 +2,18 @@
   <div class="leadership__container">
     <div class="col-left">
       <h1 class="leadership__title">{{ .Params.leadership.title }}</h1>
+      {{ if .Params.leadership.heading }}
       <p class="leadership__heading">{{ .Params.leadership.heading | safeHTML }}</p>
+      {{ end }}
       <p class="leadership__details">{{ .Params.leadership.details }}</p>
-      <button class="leadership__all-button default">
+      {{ range first 1 .Params.leadership.leader }}
+      <button class="leadership__all-button leader__link default" data-href="#{{ urlize .name }}">
+  	  {{ end }}
         <span class="leadership-all">All Team Bios</span>
       </button>
     </div>
     <div class="leadership__leaders">
-      {{ range .Params.leadership.leader }}
+      {{ range first 2 .Params.leadership.leader }}
         <div class="leadership__leader leader">
           <a
             href="#{{ urlize .name }}"
@@ -26,6 +30,12 @@
           </a>
         </div>
       {{ end }}
+      {{ range first 1 .Params.leadership.leader }}
+      <button class="leadership__all-button leader__link default mobile" data-href="#{{ urlize .name }}">
+  	  {{ end }}
+        <span class="leadership-all">All Team Bios</span>
+      </button>
     </div>
   </div>
 </section>
+

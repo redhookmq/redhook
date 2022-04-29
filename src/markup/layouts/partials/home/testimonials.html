@@ -2,29 +2,41 @@
   <div class="testimonials__container">
 
   	<div class="testimonials__testimonial-wrapper">
+      {{ if .Params.testimonials.title }}
   		<h1 class="testimonials__title">{{ .Params.testimonials.title }}</h1>
+      {{ end }}
+      {{ if .Params.testimonials.heading }}
     	<p class="testimonials__heading">{{ .Params.testimonials.heading }}</p>
-    	
-    	<div class="testimonials__testimonials-container">
-    	{{ range $index, $testimonial := .Params.testimonials.testimonial }}
+      {{ end }}
+    	<div class="testimonials__wrapper">
+	    	{{ range $index, $testimonial := .Params.testimonials.testimonial }}
+	    	<div class="testimonials__testimonials-container num-{{ $index }}">
+	    	
+	    		<p class="testimonials__testimonial-text">“{{ .quote }}”</p>
+	    		<span class="by-line">{{ .by }}</span>
 
-    		<p class="testimonials__testimonial-text">“{{ .quote }}”</p>
-    		<span class="by-line">{{ .by }}</span>
-
-    	{{ end }}
-    	</div>
-
+	    	</div>
+	      {{ end }}
+      	</div>
   	</div>
 
   </div>
+  <div class="bg"> </div>
 </section>
 <style>
+  .bg {
+    display: none;
+  }
   .testimonials-hero {
-    background-image: url({{ .Params.testimonials.image_lrg | relURL }});
+    background-image: url({{ .Params.testimonials.image_lrg }});
   }
   @media (max-width: 870px) {
     .testimonials-hero {
-      background-image: url({{ .Params.testimonials.image_sml | relURL }});
+      background-image: none;
+    }
+
+    .testimonials .bg {
+      background-image: url({{ .Params.testimonials.image_sml }});
     }
   }
 </style>
