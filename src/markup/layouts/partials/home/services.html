@@ -27,10 +27,10 @@
     </div>
 
     <div class="services__col-right">
-      {{ with .Params.services.title }}
+      {{ if .Params.services.title }}
       <h1 class="services__title">{{ .Params.services.title | safeHTML }}</h1>
       {{ end }}
-      {{ with .Params.services.heading }}
+      {{ if .Params.services.heading }}
       <h2 class="services__heading">{{ .Params.services.heading | safeHTML }}</h2>
       {{ end }}
       
