@@ -227,6 +227,41 @@ leadership:
       image: images/uploads/home/leadership/Leo_Paolo_Fernando.jpg
       name: Leo Paolo Fernando
       role: Controller
+    - bio: >-
+        Alyssa supports Red Hook’s business development and marketing team.
+        Introducing charters to our model and helping them start the process of
+        building their forever home is her specialty. Additionally she assists
+        with our day-to-day marketing, which includes conference attendance and
+        building brand awareness to our local communities. As a former charter
+        school teacher and a real estate enthusiast her zest the work she does
+        is unmatched. She holds a Bachelor's Degree in Education, and a Masters
+        Degree of Art in Instruction Design and Curriculum Development.
+      email: aross@redhookcap.com
+      image: /images/uploads/Alyssa.jpg
+      name: Alyssa Ross
+      role: Marketing & Business Development Associate
+    - bio: >-
+        Ingrid is responsible for the day-to-day project management and
+        coordination with design teams and public agencies. Prior to joining
+        RedHook, Ingrid’s 7 years of experience in commercial architectural
+        design include projects in higher education, commercial office space,
+        capital improvement and tenant improvement categories. Ingrid holds a
+        Bachelor of Science degree in Interior Design.
+      image: /images/uploads/BioIngrid.jpg
+      name: Ingrid Canedo
+      role: Project Manager
+    - bio: >-
+        David supports Red Hook’s finance team in underwriting capital projects
+        and day-to-day fiscal management. His primary responsibilities include
+        financial modeling, valuations, credit analysis, market research, and
+        investment memorandums. David frequently works alongside project
+        managers and interacts with clients and investors. Since joining in
+        2021, David has played an integral role in underwriting acquisitions,
+        maintaining held assets, and executing dispositions. David holds a B.S.
+        in Business Administration from the University of Southern California.
+      image: /images/uploads/David_Choi.jpg
+      name: David Choi
+      role: Financial Analyst
   title: About Us
 ---
 
