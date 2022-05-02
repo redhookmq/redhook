@@ -157,7 +157,7 @@ collections:
               - {label: "Job Email", "jobemail", widget: "string"}
           - label: "Logo Scroller"
             name: "logos"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Logo", name: "logo", widget: "image"}
               - {label: "Title", name: "title", widget: "string"}
