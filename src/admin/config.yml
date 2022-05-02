@@ -76,7 +76,8 @@ collections:
             name: "services"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Large Font Title", name: "largetitle", widget: "string"}
               - {label: "Details", name: "details", widget: "text"}
               - label: "Service"
                 name: "services"
@@ -84,13 +85,17 @@ collections:
                 fields:
                   - {label: "Icon", name: "icon", widget: "select", options: ["handshake", "shovels", "building"]}
                   - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Details", name: "details", widget: "text"}
+              - {label: "Video Iframe Code", name: "video_url", widget: "string"}
+              - {label: "Desktop Video Image (500 x 500)", name: "video_image_lrg", widget: "image"}
+              - {label: "Mobile Video Image (300 x 300)", name: "video_image_sml", widget: "image"}
+              - {label: "Section Overflow Image (destktop - 700px x 700px)", name: "overflow_image_lrg", widget: "image"}
+              - {label: "Section Overflow Image (mobile - 400px x 400px)", name: "overflow_image_sml", widget: "image"}
           - label: "Process (slideshow)"
             name: "process"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Details", name: "details", widget: "text"}
+              - {label: "Section Heading", name: "heading", widget: "text"}
+              - {label: "Large Font Title", name: "title", widget: "string"}
               - label: "Step"
                 name: "step"
                 widget: "list"
@@ -103,13 +108,21 @@ collections:
             name: "case_studies"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Details", name: "details", widget: "text"}
+              - {label: "Section Heading", name: "heading", widget: "text"}
+              - {label: "Large Font Title", name: "title", widget: "string"} 
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - {label: "Section Heading", name: "heading", widget: "text"}
+              - {label: "Large Font Title", name: "title", widget: "string"} 
           - label: "Leadership"
             name: "leadership"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Section Heading", name: "title", widget: "string"}
+              - {label: "Large Font Title", name: "heading", widget: "string"}
+              - {label: "Details", name: "details", widget: "text"} 
               - label: "Leader"
                 name: "leader"
                 widget: "list"
@@ -119,6 +132,41 @@ collections:
                   - {label: "Image (300 x 300)", name: "image", widget: "image"}
                   - {label: "Eamil", name: "email", widget: "string"}
                   - {label: "Bio", name: "bio", widget: "text"}
+          - label: "FAQs"
+            name: "faq"
+            widget: "object"
+            fields:
+              - {label: "Section Heading", name: "title", widget: "string"}
+              - {label: "Large Font Title", name: "heading", widget: "string"}
+              - label: "Groups"
+                name: "groups"
+                widget: "list"
+                fields: 
+                  - {label: "Question", name: "question", widget: "string"}
+                  - {label: "Answer", name: "answer", widget: "text"}
+          - label: "Careers"
+            name: "careers"
+            widget: "object"
+            fields:
+              - {label: "Section Heading", name: "title", widget: "text"}
+              - {label: "Large Font Title", name: "heading", widget: "string"}
+              - {label: "Date", name: "date", widget: "string"}
+              - {label: "Job Title", "jobtitle", widget: "string"} 
+              - {label: "Job Description", "jobdescription", widget: "text"}
+              - {label: "Email Icon", name: "imageemail", widget: "image"}
+              - {label: "Job Email", "jobemail", widget: "string"}
+          - label: "Logo Scroller"
+            name: "logos"
+            widget: "list"
+            fields:
+              - {label: "Logo", name: "logo", widget: "image"}
+          - label: "Contact Form"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "Large Font Title", name: "largetitle", widget: "string"}
+              - {label: "Details", name: "details", widget: "text"}
   - name: "case-studies"
     label: "Case Study"
     folder: "src/markup/content/case-studies"
