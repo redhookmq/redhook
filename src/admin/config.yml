@@ -159,8 +159,12 @@ collections:
             name: "logos"
             widget: "object"
             fields:
-              - {label: "Logo", name: "logo", widget: "image"}
-              - {label: "Title", name: "title", widget: "string"}
+              - label: "Logo"
+                name: "logo"
+                widget: "list"
+                fields: 
+                  - {label: "Image", name: "image", widget: "image"}
+                  - {label: "Title", name: "title", widget: "string"}
           - label: "Contact Form"
             name: "contact"
             widget: "object"
