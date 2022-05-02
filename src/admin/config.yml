@@ -116,6 +116,14 @@ collections:
             fields:
               - {label: "Section Heading", name: "heading", widget: "text"}
               - {label: "Large Font Title", name: "title", widget: "string"} 
+              - {label: "Large Image (1167 x 480)", name: "img_lrg", widget: "image"}
+              - {label: "Small Image (560 x 375)", name: "img_sml", widget: "image"}
+              - label: "Testimonial"
+                name: "testimonial"
+                widget: "list" 
+                fields: 
+                  - {label: "Quote", name: "quote", widget: "text"}
+                  - {label: "By", name: "by", widget: "string"}
           - label: "Leadership"
             name: "leadership"
             widget: "object"
