@@ -85,6 +85,27 @@ case_studies:
   title: Case Studies
 testimonials:
   heading: What They Say
+  testimonial:
+    - by: 'ALEX LUCERO, CHIEF EXECUTIVE OFFICER OF REAL JOURNEY ACADEMIES'
+      quote: >-
+        Red Hook believed in our team, believed in our vision and most
+        importantly believed that we can change the lives of students in the
+        Inland Empire. We're thrilled that we chose them as our bridge financing
+        and happy to say we now own our school campus! 
+    - by: >-
+        ERCAN AYDOGDU, EXECUTIVE DIRECTOR AND CEO OF CORAL ACADEMY OF SCIENCE
+        LAS VEGAS
+      quote: >-
+        Red Hook's deep knowledge of the charter school facility development
+        process allowed us to keep focused on our students' academics and
+        learning. I highly recommend the Red Hook team for facility financing
+        and development.
+    - by: 'DAVID DOYLE, PRESIDENT AND CEO OF VALUE SCHOOLS'
+      quote: >-
+        For years now, Value Schools has worked hand-in-hand with Red Hook
+        Capital to find, design and create magnificent schools for our students.
+        From financing to development, Red Hook was with us every step of the
+        way. 
   title: Testimonials
 leadership:
   details: >-
