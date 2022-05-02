@@ -158,7 +158,7 @@ collections:
           - label: "Logo Scroller"
             name: "logos"
             widget: "list"
-            fields:
+            field:
               - {label: "Logo", name: "logo", widget: "image"}
           - label: "Contact Form"
             name: "contact"
