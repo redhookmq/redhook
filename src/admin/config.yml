@@ -77,7 +77,7 @@ collections:
             widget: "object"
             fields:
               - {label: "Section Title", name: "title", widget: "string"}
-              - {label: "Large Font Title", name: "largetitle", widget: "string"}
+              - {label: "Large Font Title", name: "heading", widget: "string"}
               - {label: "Details", name: "details", widget: "text"}
               - label: "Service"
                 name: "services"
@@ -148,8 +148,8 @@ collections:
             name: "careers"
             widget: "object"
             fields:
-              - {label: "Section Heading", name: "title", widget: "text"}
-              - {label: "Large Font Title", name: "heading", widget: "string"}
+              - {label: "Section Heading", name: "title", widget: "string"}
+              - {label: "Large Font Title", name: "heading", widget: "text"}
               - {label: "Date", name: "date", widget: "string"}
               - {label: "Job Title", "jobtitle", widget: "string"} 
               - {label: "Job Description", "jobdescription", widget: "text"}
@@ -158,8 +158,9 @@ collections:
           - label: "Logo Scroller"
             name: "logos"
             widget: "list"
-            field:
+            fields:
               - {label: "Logo", name: "logo", widget: "image"}
+              - {label: "Title", name: "title", widget: "string"}
           - label: "Contact Form"
             name: "contact"
             widget: "object"
