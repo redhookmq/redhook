@@ -166,11 +166,11 @@ collections:
                   - {label: "Image", name: "image", widget: "image"}
                   - {label: "Title", name: "title", widget: "string"}
           - label: "Contact Form"
-            name: "contact"
+            name: "contact_form"
             widget: "object"
             fields:
               - {label: "Section Title", name: "title", widget: "string"}
-              - {label: "Large Font Title", name: "largetitle", widget: "string"}
+              - {label: "Large Font Title", name: "heading", widget: "string"}
               - {label: "Details", name: "details", widget: "text"}
   - name: "case-studies"
     label: "Case Study"
