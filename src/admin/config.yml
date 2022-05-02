@@ -151,10 +151,10 @@ collections:
               - {label: "Section Heading", name: "title", widget: "string"}
               - {label: "Large Font Title", name: "heading", widget: "text"}
               - {label: "Date", name: "date", widget: "string"}
-              - {label: "Job Title", "jobtitle", widget: "string"} 
-              - {label: "Job Description", "jobdescription", widget: "text"}
+              - {label: "Job Title", name: "jobtitle", widget: "string"} 
+              - {label: "Job Description", name: "jobdescription", widget: "text"}
               - {label: "Email Icon", name: "imageemail", widget: "image"}
-              - {label: "Job Email", "jobemail", widget: "string"}
+              - {label: "Job Email", name: "jobemail", widget: "string"}
           - label: "Logo Scroller"
             name: "logos"
             widget: "object"
