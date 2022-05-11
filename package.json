@@ -16,6 +16,15 @@
     "> 1%",
     "last 2 versions"
   ],
+  "engines": {
+    "node": ">=12 <17"
+  },
+  "overrides": {
+    "graceful-fs": "^4.2.9"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.9"
+  },
   "dependencies": {
     "isotope-layout": "^3.0.4",
     "isotope-packery": "^2.0.0",
@@ -23,7 +32,9 @@
     "jquery.easing": "^1.4.1",
     "lodash": "^4.17.4",
     "modernizr": "^3.5.0",
-    "postal": "^2.0.5"
+    "node-sass": "^7.0.1",
+    "postal": "^2.0.5",
+    "sass": "^1.51.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -51,7 +62,7 @@
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-util": "^3.0.7",
     "imports-loader": "^0.7.1",

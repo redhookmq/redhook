@@ -20,14 +20,14 @@ const plugins = [
 
   // Prints more readable module names in the browser console on HMR updates
   // prevent ID's from changing, invalidating the cache
-  new webpack.NamedModulesPlugin(),
+  // new webpack.NamedModulesPlugin(),
 
   // Generates chunks of common modules shared between entry points
   // and splits them into separate bundles
-  new webpack.optimize.CommonsChunkPlugin({
-    name: ['vendor', 'manifest'],
-    minChunks: Infinity
-  })
+  // new webpack.optimize.CommonsChunkPlugin({
+  //   name: ['vendor', 'manifest'],
+  //   minChunks: Infinity
+  // })
 ];
 
 // add to plugins array based on prod/dev environment

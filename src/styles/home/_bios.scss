@@ -367,7 +367,13 @@
     &.mobile {
       display: block;
     }
-  }  
+  } 
+  
+  .bio {
+    &:nth-child(odd) {
+      flex-direction: row;
+      margin-right: 15px;
+  }
 
 }
 
