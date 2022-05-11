@@ -16,15 +16,6 @@
     "> 1%",
     "last 2 versions"
   ],
-  "engines": {
-    "node": ">=12 <17"
-  },
-  "overrides": {
-    "graceful-fs": "^4.2.9"
-  },
-  "resolutions": {
-    "graceful-fs": "^4.2.9"
-  },
   "dependencies": {
     "isotope-layout": "^3.0.4",
     "isotope-packery": "^2.0.0",
