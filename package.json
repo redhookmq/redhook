@@ -23,6 +23,7 @@
     "jquery.easing": "^1.4.1",
     "lodash": "^4.17.4",
     "modernizr": "^3.5.0",
+    "node-sass": "^7.0.1",
     "postal": "^2.0.5",
     "sass": "^1.51.0"
   },
