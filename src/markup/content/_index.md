@@ -387,9 +387,8 @@ careers:
   title: Careers
 logos:
   logo:
-    - image: /images/uploads/home/logo-scroller/caslv-logo.png
-    - image: /images/uploads/home/logo-scroller/ocean-charter-logo.png
     - image: /images/uploads/home/logo-scroller/crest-logo.png
+    - image: /images/uploads/american-cancer-society-logo.png
     - image: /images/uploads/home/logo-scroller/clic-logo.png
     - image: /images/uploads/home/logo-scroller/sonoran-logo.png
     - image: /images/uploads/home/logo-scroller/lvip-high-school-logo.png
@@ -403,6 +402,7 @@ logos:
     - image: /images/uploads/home/logo-scroller/TEACH.png
     - image: /images/uploads/home/logo-scroller/VALUESCHOOLS.png
     - image: /images/uploads/home/logo-scroller/VISTA_CONDOR.png
+    - image: /images/uploads/home/logo-scroller/ocean-charter-logo.png
 contact_form:
   details: >-
     Please contact us for any questions, comments, or inquiries you may have
