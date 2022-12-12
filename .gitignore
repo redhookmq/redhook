@@ -49,6 +49,7 @@ _nogit
 .module-cache
 .tmp
 .sass-cache
+.node-version
 node_modules
 build
 dist
