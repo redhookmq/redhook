@@ -2,7 +2,7 @@
   command = "yarn build"
   publish = "dist"
 [build.environment]
-  NODE_VERSION = "10.16.0"
+  NODE_VERSION = "12.17.0"
   YARN_VERSION = "1.22.0"
 
 [context.deploy-preview]
