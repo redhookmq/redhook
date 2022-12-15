@@ -8,13 +8,12 @@ import notify from 'gulp-notify';
 import plumber from 'gulp-plumber';
 import postcss from 'gulp-postcss';
 import runSequence from 'run-sequence';
-// import sass from 'gulp-sass';
+import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import webpack from 'webpack';
 
 import webpackConfig from './webpack.conf';
 
-const sass = require('gulp-sass')(require('sass'));
 const browserSync = BrowserSync.create();
 // use Hugo binary file for the current platform (linux, windows, darwin/mac)
 const hugoBin = `./bin/hugo.${process.platform === 'win32' ? 'exe' : process.platform}`;
@@ -176,10 +175,10 @@ const reportError = function (error) {
   notify({
     title: `Task Failed [${error.plugin}]`,
     message: `${lineNumber} See console.`,
-    //sound: 'Sosumi' // See: https://github.com/mikaelbr/node-notifier#all-notification-options-with-their-defaults
+    sound: 'Sosumi' // See: https://github.com/mikaelbr/node-notifier#all-notification-options-with-their-defaults
   }).write(error);
 
-  // gutil.beep(); // Beep 'sosumi' again
+  gutil.beep(); // Beep 'sosumi' again
 
   // Inspect the error object
   // console.log(error);
@@ -189,14 +188,14 @@ const reportError = function (error) {
 
   // Pretty error reporting
   let report = '';
-  //const chalk = gutil.colors.white.bgRed;
+  const chalk = gutil.colors.white.bgRed;
 
-  report += `${'TASK:'} [${error.plugin}]\n`;
-  report += `${'PROB:'} ${error.message}\n`;
-  if (error.lineNumber) { report += `${'LINE:'} ${error.lineNumber}\n`; }
-  if (error.fileName) { report += `${'FILE:'} ${error.fileName}\n`; }
+  report += `${chalk('TASK:')} [${error.plugin}]\n`;
+  report += `${chalk('PROB:')} ${error.message}\n`;
+  if (error.lineNumber) { report += `${chalk('LINE:')} ${error.lineNumber}\n`; }
+  if (error.fileName) { report += `${chalk('FILE:')} ${error.fileName}\n`; }
   console.error(report);
 
   // Prevent the 'watch' task from stopping
-  //this.emit('end');
+  this.emit('end');
 };
